@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+  <product>
+    <id>8909-0003</id>
+    <title>Амортизатор задній загальне</title>
+    <description>Хороший стан, технічно справний</description>
+    <link>http://127.0.0.1:8000/spare/6/</link>
+    <image_link>/media/spare_parts/image_not_foud_C1JaWxp.jpg.jpg</image_link>
+    <availability>out of stock</availability>
+    <price>20.00 UAH</price>
+    <brand>Ford</brand>
+    <mpn>561512011D</mpn>
+    <condition>used</condition>
+  </product>
+  <product>
+    <id>8909-0002</id>
+    <title>Актуатор гальма стоянки, модуль</title>
+    <description>Хороший стан, технічно справний, двигун гальма стоянки</description>
+    <link>http://127.0.0.1:8000/spare/5/</link>
+    <image_link>/media/spare_parts/image_not_foud_LVz2Lx8.jpg.jpg</image_link>
+    <availability>out of stock</availability>
+    <price>100.00 UAH</price>
+    <brand>Ford</brand>
+    <mpn>LR027141</mpn>
+    <condition>used</condition>
+  </product>
+  <product>
+    <id>h6g4-0003</id>
+    <title>Аксесуари (різне)</title>
+    <description>Хороший стан, був використаний в CW9315000AA,годинник консолі</description>
+    <link>http://127.0.0.1:8000/spare/4/</link>
+    <image_link>/media/spare_parts/image_not_foud_tKmwiiK.jpg.jpg</image_link>
+    <availability>out of stock</availability>
+    <price>80.00 UAH</price>
+    <brand>Kia</brand>
+    <mpn>C2D21658</mpn>
+    <condition>used</condition>
+  </product>
+  <product>
+    <id>h6g4-0002</id>
+    <title>Акумуляторна батарея, кріплення та ін.</title>
+    <description>Була у використанні, технічно справна</description>
+    <link>http://127.0.0.1:8000/spare/3/</link>
+    <image_link>/media/spare_parts/image_not_foud_tvqUPUX.jpg.jpg</image_link>
+    <availability>out of stock</availability>
+    <price>20.00 UAH</price>
+    <brand>Kia</brand>
+    <mpn>857444R000</mpn>
+    <condition>used</condition>
+  </product>
+  <product>
+    <id>8909-0001</id>
+    <title>CD-чейнджер, програвач CD/DVD</title>
+    <description>Был в использовании, технически исправен</description>
+    <link>http://127.0.0.1:8000/spare/2/</link>
+    <image_link>/media/spare_parts/image_not_foud_t00CW6U.jpg.jpg</image_link>
+    <availability>out of stock</availability>
+    <price>25.00 UAH</price>
+    <brand>Ford</brand>
+    <mpn>68209666AF</mpn>
+    <condition>used</condition>
+  </product>
+  <product>
+    <id>h6g4-0001</id>
+    <title>Абсорбер (вугільний фільтр)</title>
+    <description>Хорошее состояние, технически исправное, было в использовании</description>
+    <link>http://127.0.0.1:8000/spare/1/</link>
+    <image_link>/media/spare_parts/image_not_foud_C21CHo0.jpg.jpg</image_link>
+    <availability>out of stock</availability>
+    <price>35.00 UAH</price>
+    <brand>Kia</brand>
+    <mpn>31410C1000</mpn>
+    <condition>used</condition>
+  </product>
+</products>
