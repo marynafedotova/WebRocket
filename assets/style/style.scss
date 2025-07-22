@@ -1,5 +1,5 @@
 
-
+@import '_fonts.css';
 @import '_hamburger.scss';
 body {
   cursor: url('../img/free-icon-cursor-6824769.png');
@@ -8,41 +8,6 @@ html, body {
   overflow-x: hidden;
 }
 
-// @font-face {
-//   font-family: 'Inter Regular';
-//   src: local('Inter Regular'), local('Inter Regular'), url('../fonts/Inter-Regular.woff2') format('woff2');
-//   font-weight: 400;
-//   font-display: swap;
-// }
-
-// @font-face {
-//   font-family: 'Montserrat Regular';
-//   src: local('Montserrat Regular'), local('Montserrat Regular'), url('../fonts/Montserrat-Regular.woff2') format('woff2');
-//   font-weight: 400;
-//   font-display: swap;
-// }
-
-// @font-face {
-//   font-family: 'Montserrat Bold';
-//   src: local('Montserrat Bold'), local('Montserrat Bold'), url('../fonts/Montserrat-Bold.woff2') format('woff2');
-//   font-weight: 700;
-//   font-display: swap;
-// }
-
-// @font-face {
-//   font-family: 'Open Sans Regular';
-//   src: local('Open Sans Regular'), local('Open Sans Regular'), url('../fonts/OpenSans-Regular.woff2') format('woff2');
-//   font-weight: 400;
-//   font-display: swap;
-// }
-
-// @font-face {
-//   font-family: 'Open Sans Italic';
-//   src: local('Open Sans Italic'), local('Open Sans Italic'), url('../fonts/OpenSans-Italic.woff2') format('woff2');
-//   font-weight: 400;
-//   font-display: swap;
-// }
-/* Основные стили */
 :root {
   --primary-color: #1d3557;
   --secondary-color: #5db2d9;
@@ -54,8 +19,215 @@ html, body {
   --dark-blue-color: #040156;
 
 }
+.messenger-chats {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 9999; /* Чтобы иконки были поверх всех элементов */
+  }
+  
+  .messenger-link {
+    display: inline-block;
+    transition: transform 0.2s, opacity 0.2s;
+    opacity: 0.9;
+  }
+  
+  .messenger-link:hover {
+    transform: scale(1.1);
+    opacity: 1;
+    border: 1px solid white;
+    border-radius: 50%;
+  }
+  
+  .messenger-icon {
+    width: 50px; /* Можно увеличить размер для лучшей видимости */
+    height: 50px;
+    border-radius: 50%; /* Круглые иконки (опционально) */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Легкая тень для выделения */
+  }
+  
+   .development-stages {
+    padding: 80px 0;
+    position: relative;
+  }
+  
+  
+  .section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 15px;
+    color: var(--secondary-color);
+  }
+  
+  .highlight {
+    color: var(--accent-color);
+  }
+  
+  .section-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: whitesmoke;
+    max-width: 700px;
+    margin: 0 auto 60px;
+    line-height: 1.6;
+  }
+  
+  .timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background: #e6e8f0;
+    top: 0;
+    bottom: 0;
+    left: 50px;
+    margin-left: -2px;
+    border-radius: 10px;
+  }
+  
+  .stage {
+    position: relative;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .stage-number {
+    width: 60px;
+    height: 60px;
+    background: #4361ee;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    flex-shrink: 0;
+    margin-right: 30px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(67, 97, 238, 0.3);
+  }
+  
+  .stage-content {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+    flex-grow: 1;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .stage:hover .stage-content {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .stage-title {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: var(--dark-violet-color);
+  }
+  
+  .stage-description {
+    color: #6b7280;
+    line-height: 1.7;
+    margin: 0;
+  }
+  
+  .cta-box {
+    background: var(--secondary-color);
+    max-width: 800px;
+    margin: 70px auto 0;
+    padding: 40px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    border: 1px solid --accent-color;
+  }
+  
+  .cta-text {
+    font-size: 1.3rem;
+    color: whitesmoke;
+    margin-bottom: 25px;
+  }
+  
+  .cta-button {
+    background: #4361ee;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
+  }
+  
+  .cta-button:hover {
+    background: #3a56d4;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(67, 97, 238, 0.4);
+  }
+  
+  @media (max-width: 768px) {
+    .timeline::before {
+      left: 30px;
+    }
+    
+    .stage-number {
+      width: 50px;
+      height: 50px;
+      margin-right: 20px;
+    }
+    
+    .stage-content {
+      padding: 20px;
+    }
+    
+    .section-title {
+      font-size: 2rem;
+    }
+  }
 
-
+  @font-face {
+  font-family: 'CodenameCoderFree4F-Bold';
+  src: local('CodenameCoderFree4F-Bold'), local('CodenameCoderFree4F-Bold'),
+      url('../fonts/CodenameCoderFree4F-Bold.woff2') format('woff2');
+  font-weight: bold;
+  }
+  
+  @font-face {
+  font-family: 'Mariupol-Bold';
+  src: local('Mariupol-Bold'), local('Mariupol-Bold'),
+      url('../fonts/Mariupol-Bold.woff2') format('woff2');
+  font-weight: 700;
+  }
+  
+  @font-face {
+  font-family: 'Mariupol-Regular';
+  src: local('Mariupol-Regular'), local('Mariupol-Regular'),
+      url('../fonts/Mariupol-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  }
+  
+  @font-face {
+  font-family: 'Stellarum';
+  src: local('Stellarum'), local('Stellarum'),
+      url('../fonts/Stellarum.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  }
 
 a {
   text-decoration: none;
@@ -119,7 +291,7 @@ body {
   font-size: 1rem;
   line-height: 1.5;
   background: rgb(0,0,0);
-background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(53,51,205,1) 100%);
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(53,51,205,1) 100%);
   color: #FFFFFF;
   }
 
@@ -164,7 +336,6 @@ header {
           width: 140px;
         }
       }
-
       nav{
         vertical-align: middle;
         padding-top: 8px;
@@ -174,9 +345,8 @@ header {
           vertical-align: middle;
           transition: all 0.3s ease;
           a {
-            font-family: 'Open Sans Regular';
+            font-family: 'CodenameCoderFree4F Bold';
             font-size: 1.2rem;
-            letter-spacing: 0rem;
             color: $wite;
             text-transform: uppercase;
             position: relative;
@@ -301,11 +471,11 @@ main {
   a {
     width: 100%;
     display: inline-block;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin: 30px;
     color: $black;
     text-decoration: none;
-    font-family: 'Montserrat Regular';
+    font-family: 'CodenameCoderFree4F Bold';
     font-size: 0.875rem;
     font-weight: 400;
     line-height: 1.5rem;
@@ -380,6 +550,7 @@ main {
     // background-color: rgba(#f0f1f7, .3);
     h1{
       padding-bottom: 100px;
+      font-family: 'CodenameCoderFree4F Bold';
       font-size: 3rem;
       text-align: left;
     }
@@ -399,6 +570,8 @@ main {
       gap: 16px;
       a{
         color: var(--dark-blue-color);
+        font-family: 'CodenameCoderFree4F Bold';
+        font-size: 1.2rem;
       }
       .icon-arrow{
         width: 48px;
@@ -419,7 +592,10 @@ main {
   }
 
 }
-
+.hero-btn a{
+  font-family: 'CodenameCoderFree4F Bold';
+  font-size: 1.2rem;
+}
 .hero .btn {
   background: var(--accent-color);
   color: #fff;
@@ -477,6 +653,8 @@ main {
       text-align: center;
       color: var(--light-cyan-color);
       font-size: 2rem;
+      font-family: 'Stellarum';
+
     }
     .features-block{
       display: flex;
@@ -793,21 +971,27 @@ footer {
 .container-product {
   margin: 20px auto;
   display: flex;
-  justify-content: center;
-  gap: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
   padding-bottom: 100px;
   border-bottom: 1px solid var(--dark-violet-color);
-
+  gap: 42px;
 }
 .product-card {
-  background: #fff;
+  width: 50%;
+  background: var(--dark-blue-color);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+ align-items: center;
 }
-.product-card img {
-  max-width: 50%;
+.product-img {
+  max-width: 33%;
   height: auto;
   border-radius: 10px;
 }
@@ -817,8 +1001,8 @@ footer {
   margin: 10px 0;
 }
 .product-description {
-  font-size: 1em;
-  color: #333;
+  font-size: 1,2rem;
+  color: #faf4f4;
   margin-bottom: 15px;
 }
 .product-price {
@@ -827,6 +1011,49 @@ footer {
   font-weight: bold;
 }
 
+
+.product-img {
+  transition: transform 0.9s ease;
+  transform-style: preserve-3d;
+}
+.product-img:hover {
+  transform: rotateY(180deg);
+}
+.product-block{
+  display: flex; 
+  justify-content: space-between;
+  width: 100%;
+  flex-direction: row-reverse;
+  font-size: 1.2rem;
+}
+.product-price {
+  display: inline-block;
+  animation: bounce 1s infinite alternate;
+  font-size: 2rem;
+}
+.product-link{
+background: #06DBAC;
+background: linear-gradient(90deg, rgba(6, 219, 172, 1) 0%, rgba(189, 0, 255, 1) 100%); 
+width: 50%;
+padding: 8px 16px;
+border-radius: 8px;
+border: 1px solid var(--light-blue-color);
+}
+.product-link:hover{
+  transition: all .9s ease;
+  scale: 1.1;
+  a{
+    color: #faf4f4;
+  }
+}
+.product-link a{
+  color: black;
+  font-weight: 600;
+}
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-15px); }
+}
 //faq
 #faq {
   padding-bottom: 100px;

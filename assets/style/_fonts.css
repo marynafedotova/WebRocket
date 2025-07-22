@@ -1,0 +1,31 @@
+
+
+@font-face {
+font-family: 'CodenameCoderFree4F Bold';
+src: local('CodenameCoderFree4F Bold'), local('CodenameCoderFree4F Bold'),
+    url('../fonts/CodenameCoderFree4F-Bold.woff2') format('woff2');
+font-weight: bold;
+}
+
+@font-face {
+font-family: 'Mariupol Bold';
+src: local('Mariupol Bold'), local('Mariupol Bold'),
+    url('../fonts/Mariupol-Bold.woff2') format('woff2');
+font-weight: 700;
+}
+
+@font-face {
+font-family: 'Mariupol Regular';
+src: local('Mariupol Regular'), local('Mariupol Regular'),
+    url('../fonts/Mariupol-Regular.woff2') format('woff2');
+font-weight: 400;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Stellarum';
+src: local('Stellarum'), local('Stellarum'),
+    url('../fonts/Stellarum.woff2') format('woff2');
+font-weight: 500;
+font-style: normal;
+}
