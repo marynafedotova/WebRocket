@@ -1340,3 +1340,283 @@ gap: 36px;
   text-align: center;
   font-size: 1.6rem;
 }
+//E-Commerce Blast
+ .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+.feature-card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 25px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.price-block {
+    background-color: var(--secondary-color);
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 40px 0;
+}
+.cta-button {
+    display: inline-block;
+    background-color: #6e48aa;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+.cta-button:hover {
+    background-color: #9d50bb;
+}
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 40px auto;
+}
+.timeline-item {
+    padding: 20px 40px;
+    position: relative;
+    background-color: #073a6d;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+.timeline-item:before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 24px;
+    width: 20px;
+    height: 20px;
+    background: #000913;
+    border-radius: 50%;
+}
+.bottom{
+  padding-bottom: 100px;
+}
+.portfolio-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+gap: 30px;
+margin: 50px 0;
+}
+.portfolio-item {
+border-radius: 12px;
+overflow: hidden;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+transition: all 0.3s ease;
+}
+.portfolio-item:hover {
+transform: scale(1.03);
+}
+
+ .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 50px 0;
+}
+.stat-card {
+  background: var(--dark-violet-color);
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+.stat-number {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 10px 0;
+}
+@media (max-width: 768px) {
+  .price-block::before {
+      right: -70px;
+      font-size: 12px;
+  }
+}
+.demo-bot {
+max-width: 300px;
+margin: 0 auto;
+border: 1px solid #ddd;
+border-radius: 12px;
+overflow: hidden;
+box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.use-cases {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 20px;
+margin: 50px 0;
+}
+.use-case {
+background: var(--dark-violet-color);
+border-radius: 12px;
+padding: 25px;
+box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+transition: all 0.3s ease;
+}
+.use-case:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 25px rgba(0, 136, 204, 0.1);
+}
+@media (max-width: 768px) {
+.hero {
+    padding: 60px 20px;
+}
+.price-tag {
+    font-size: 36px;
+}
+}
+
+/* Секція про компанію */
+  .about-company {
+    padding: 80px 0;
+    text-align: center;
+  }
+  
+  .company-description {
+    max-width: 800px;
+    margin: 20px auto 50px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+  }
+  
+  .value-card {
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    background: var(--violet-color);
+  }
+  
+  .value-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .value-card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+  }
+  
+  /* Секція з цитатами */
+  .quote-section {
+    padding: 60px 0;
+  }
+  
+  .quote-section.dark {
+    color: white;
+  }
+  
+  .quote-card {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .quote-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+  }
+  
+  .quote-card blockquote {
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  .quote-card footer {
+    font-weight: bold;
+  }
+  
+  /* Наш підхід */
+  .our-approach {
+    padding: 80px 0;
+  }
+  
+  .approach-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-top: 40px;
+  }
+  
+  .approach-text {
+    flex: 1;
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+  
+  .approach-image {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .approach-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Наші переваги */
+  .advantages {
+    padding: 80px 0;
+  }
+  
+  .advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+  }
+  
+  .advantage-card {
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .advantage-number {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgba(0,0,0,0.05);
+    line-height: 1;
+  }
+  
+  @media (max-width: 768px) {
+    .approach-content {
+      flex-direction: column;
+    }
+    
+    .company-description {
+      font-size: 1rem;
+    }
+    
+    .quote-card blockquote {
+      font-size: 1.2rem;
+    }
+  }

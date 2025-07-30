@@ -1,0 +1,20 @@
+<script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+
+<div id="typewriter-element"></div>
+
+<script>
+const typewriter = new Typewriter('#typewriter-element', {
+  loop: true,
+  delay: 75,
+});
+
+typewriter
+  .typeString('Перший рядок тексту')
+  .pauseFor(1000)
+  .deleteAll()
+  .typeString('Другий варіант <strong>тексту</strong>')
+  .pauseFor(1000)
+  .deleteChars(7)
+  .typeString('з ефектом!')
+  .start();
+</script>

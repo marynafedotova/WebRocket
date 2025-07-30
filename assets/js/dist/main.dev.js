@@ -18,22 +18,25 @@ document.addEventListener("mousemove", function (e) {
   cursor.style.top = "".concat(e.pageY, "px"); // Використовуємо pageY
 }); //reviews
 
-var currentIndex = 0;
-var slides = document.querySelectorAll('.review-slide');
-var totalSlides = slides.length;
+document.addEventListener('DOMContentLoaded', function () {
+  var slides = document.querySelectorAll('.review-slide');
+  var totalSlides = slides.length;
+  if (totalSlides === 0) return; // Слайдів немає — нічого не робимо
 
-function showNextSlide() {
-  slides[currentIndex].style.display = 'none';
-  currentIndex = (currentIndex + 1) % totalSlides;
-  slides[currentIndex].style.display = 'block';
-} // Початкове налаштування слайдера
+  var currentIndex = 0;
+
+  function showNextSlide() {
+    slides[currentIndex].style.display = 'none';
+    currentIndex = (currentIndex + 1) % totalSlides;
+    slides[currentIndex].style.display = 'block';
+  } // Початкове відображення
 
 
-slides.forEach(function (slide, index) {
-  slide.style.display = index === 0 ? 'block' : 'none';
-});
-setInterval(showNextSlide, 3000); // Переходити кожні 3 секунди
-//faq
+  slides.forEach(function (slide, index) {
+    slide.style.display = index === 0 ? 'block' : 'none';
+  });
+  setInterval(showNextSlide, 3000);
+}); //faq
 
 var faqItems = document.querySelectorAll('.faq-item');
 faqItems.forEach(function (item) {
