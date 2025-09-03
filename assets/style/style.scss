@@ -1,9 +1,43 @@
 
-@import '_fonts.css';
+// @import '_fonts.css';
 @import '_hamburger.scss';
-body {
-  cursor: url('../img/free-icon-cursor-6824769.png');
+
+
+@font-face {
+font-family: 'CodenameCoderFree4F-Bold';
+src: local('CodenameCoderFree4F-Bold'), local('CodenameCoderFree4F-Bold'),
+    url('/assets/fonts/CodenameCoderFree4F-Bold.woff2') format('woff2');
+font-weight: bold;
 }
+
+@font-face {
+font-family: 'Mariupol-Bold';
+src: local('Mariupol-Bold'), local('Mariupol-Bold'),
+    url('/assets/fonts/Mariupol-Bold.woff2') format('woff2');
+font-weight: 700;
+}
+
+@font-face {
+font-family: 'Mariupol-Regular';
+src: local('Mariupol-Regular'), local('Mariupol-Regular'),
+    url('/assets/fonts/Mariupol-Regular.woff2') format('woff2');
+font-weight: 400;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Stellarum';
+src: local('Stellarum'), local('Stellarum'),
+    url('/assets/fonts/Stellarum.woff2') format('woff2');
+font-weight: 500;
+font-style: normal;
+}
+
+
+
+// body {
+//   cursor: url('../img/free-icon-cursor-6824769.png');
+// }
 html, body {
   overflow-x: hidden;
 }
@@ -199,35 +233,6 @@ html, body {
     }
   }
 
-  @font-face {
-  font-family: 'CodenameCoderFree4F-Bold';
-  src: local('CodenameCoderFree4F-Bold'), local('CodenameCoderFree4F-Bold'),
-      url('../fonts/CodenameCoderFree4F-Bold.woff2') format('woff2');
-  font-weight: bold;
-  }
-  
-  @font-face {
-  font-family: 'Mariupol-Bold';
-  src: local('Mariupol-Bold'), local('Mariupol-Bold'),
-      url('../fonts/Mariupol-Bold.woff2') format('woff2');
-  font-weight: 700;
-  }
-  
-  @font-face {
-  font-family: 'Mariupol-Regular';
-  src: local('Mariupol-Regular'), local('Mariupol-Regular'),
-      url('../fonts/Mariupol-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  }
-  
-  @font-face {
-  font-family: 'Stellarum';
-  src: local('Stellarum'), local('Stellarum'),
-      url('../fonts/Stellarum.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-  }
 
 a {
   text-decoration: none;
@@ -290,8 +295,7 @@ body {
   font-family: sans-serif;
   font-size: 1rem;
   line-height: 1.5;
-  background: rgb(0,0,0);
-  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(53,51,205,1) 100%);
+  background: var(--dark-blue-color);
   color: #FFFFFF;
   }
 
@@ -618,8 +622,9 @@ main {
   padding: 4rem 0;
 
   .container{
-    border-top: 1px solid var(--dark-violet-color);
-    border-bottom: 1px solid var(--dark-violet-color);
+    // border-top: 1px solid var(--dark-violet-color);
+    // border-bottom: 1px solid var(--dark-violet-color);
+    padding-top: 100px;
     padding-bottom: 100px;
     .hero-btn{
       display: flex;
@@ -943,28 +948,131 @@ h1{
     padding-bottom: 34px; 
   }
 }
+// модал
+
+/* Початково прихована */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0; /* top:0; right:0; bottom:0; left:0; */
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  .modal .modal-form{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  // gap: 16px;
+  input, textarea{
+  width: 33%;
+  padding: 8px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  }
+  textarea{
+      width: 100%;
+    resize: none;
+  }
+  .submit-btn{
+    background-color: var(--dark-blue-color);
+    padding: 8px 16px;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+  }
+}
+ 
+  
+}
+
+/* При активному класі показуємо */
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal {
+  background: var(--dark-violet-color);
+  padding: 20px;
+  border-radius: 12px;
+  // max-width: 500px;
+  // width: 90%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: 1px  solid var(--dark-blue-color);
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: var(--light-blue-color);
+  padding: 2px 6px;
+}
+
 /* Footer */
 footer {
   background: var(--dark-blue-color);
+  border-top: 1px solid var(--dark-violet-color);
   color: #fff;
   text-align: center;
   padding: 1rem 0;
+  .container-footer{
+    display: flex;
+    justify-content: space-between;
+  }
   #feedback_form{
-    display: flex;flex-direction: column;
+    display: flex;
+    flex-direction: column;
     width: 20%;
     img{
       width: 34px;
     }
   input{
     margin-top: 8px;
+    margin-bottom: 8px;
     padding: 8px;
     border-radius: 8px;
     outline: transparent;
     border: 1px solid var(--light-cyan-color);
   }
-  input[tel]{
-    margin-top: 34px;
+  #btn-form{
+    padding: 8px;
+    background-color: var(--accent-color);
+    border: 1px solid var(--dark-violet-color);
+    border-radius: 8px;
+    color: var(--dark-blue-color);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    
   }
+  #btn-form:hover{
+      scale: 1.1;
+    }
+
+  }
+  .footer-link{
+    ul{
+      li{
+        background-color: var(--dark-violet-color);
+        margin-bottom: 8px;
+        padding: 8px;
+        border-radius: 8px;
+        transition: all .5s ease;
+        a{
+          color: #fff;
+        }
+      }
+              :hover{
+          background-color: var(--secondary-color);
+        }
+
+    }
   }
 }
 
@@ -1405,16 +1513,20 @@ gap: 36px;
   padding-bottom: 100px;
 }
 .portfolio-grid {
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-gap: 30px;
-margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+}
+.center{
+margin-bottom: 24px;
 }
 .portfolio-item {
 border-radius: 12px;
 overflow: hidden;
 box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 transition: all 0.3s ease;
+border: 1px solid #000913;
+margin-bottom: 24px;
+background-color: rgba(161, 138, 138, 0.11);
 }
 .portfolio-item:hover {
 transform: scale(1.03);
