@@ -1431,6 +1431,9 @@ gap: 36px;
 .portfolio-item{
   display: flex;
   padding: 24px;
+  a{
+    color: var(--accent-color);
+  }
   img{
     width: 50%;
   }

@@ -1423,6 +1423,9 @@ footer .footer-link ul :hover {
   display: flex;
   padding: 24px;
 }
+.portfolio-item a {
+  color: var(--accent-color);
+}
 .portfolio-item img {
   width: 50%;
 }
