@@ -13,7 +13,18 @@ Modern websites and applications created with love for technology.">
   <!-- Stylesheets -->
   <link rel="stylesheet" href="assets/style/lightslider.min.css">
   <link rel="stylesheet" href="assets/style/animate.min.css">
-  <link rel="stylesheet" href="assets/style/dist/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+  <link rel="stylesheet" href="assets/style/style.css">
+   <!-- Шрифт -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Swiper CSS -->
+
+
   <!-- Icons -->
   <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
@@ -89,12 +100,12 @@ Modern websites and applications created with love for technology.">
     <main>
       <section class="hero">
         <div class="hero-lb">
-          <h1>Ми — ракета вашого бізнесу</h1>
+          <h1 id="typewriter-h1"></h1>
           <div class="container-hero">
-            <p>Сучасні сайти та програми, створені з любов'ю до технологій.</p>
+            <p id="typewriter-p"></p>
             <div class="hero-btn">
               <a href="assets/pages/services.html" class="btn btn-primary">ВИБРАТИ ПОСЛУГУ</a>
-              <div class="icon-arrow ">
+              <div class="icon-arrow">
                 <img src="assets/img/arrow-left-svgrepo-com.svg" alt="arrow left">
               </div>
             </div>
@@ -112,35 +123,49 @@ Modern websites and applications created with love for technology.">
             <div class="features-img">
               <img src="assets/img/eco-friendly-icon.svg" alt="eco-friendly-icon">
             </div>
-            <ul id="FeaturelightSlider">
-              <li>
-                <div class="feature">
-                  <h3>Індивідуальний підхід</h3>
-                  <p>Кожне рішення розробляється під потреби клієнта.</p>
-                  <div class="feature-img">
-                    <img src="assets/img/remove-circle-background.svg" alt="remove-circle-background">
+              <div class="swiper cube-slider cube-slider-container">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="feature">
+                        <h3>Індивідуальний підхід</h3>
+                        <p>Кожне рішення розробляється під потреби клієнта.</p>
+                        <div class="feature-img">
+                          <img src="assets/img/remove-circle-background.svg" alt="remove-circle-background">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="feature">
+                        <h3>Сучасні технології</h3>
+                        <p>Використовуємо передові технології для вашого успіху.</p>
+                        <div class="feature-img">
+                          <img src="assets/img/circle-crown-icon.svg" alt="circle-crown-icon">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="feature">
+                        <h3>Результат у строк</h3>
+                        <p>Ми цінуємо ваш час і завжди вкладаємось у дедлайни.</p>
+                        <div class="feature-img">
+                          <img src="assets/img/alarm-icon.svg" alt="alarm-icon">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="feature">
+                        <h3>Професійна підтримка</h3>
+                        <p>Ми завжди на зв’язку, щоб допомогти вам у будь-який момент.</p>
+                          <div class="feature-img">
+                          <img src="assets/img/remove-circle-background.svg" alt="remove-circle-background">
+                        </div>
+                      </div>
+                    </div>
                   </div>
+
+                  <!-- Пагінація -->
+                  <div class="swiper-pagination"></div>
                 </div>
-              </li>
-              <li>
-                <div class="feature">
-                  <h3>Сучасні технології</h3>
-                  <p>Використовуємо передові технології для вашого успіху.</p>
-                  <div class="feature-img">
-                    <img src="assets/img/circle-crown-icon.svg" alt="circle-crown-icon">
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="feature">
-                  <h3>Результат у строк</h3>
-                  <p>Ми цінуємо ваш час і завжди вкладаємось у дедлайни.</p>
-                  <div class="feature-img">
-                    <img src="assets/img/alarm-icon.svg" alt="alarm-icon">
-                  </div>
-                </div>
-              </li>
-            </ul>
           </div>
           <div class="hero-btn">
             <a href="assets/pages/services.html" class="btn btn-primary">ВИБРАТИ ПОСЛУГУ</a>
@@ -262,16 +287,16 @@ Modern websites and applications created with love for technology.">
         </form>
         <div class="footer-link">
           <ul>
-            <li><a href="#">Політика конфіденційності</a></li>
-            <li><a href="#">Договір публічної оферти</a></li>
+            <li><a href="/assets/pages/politic.html">Політика конфіденційності</a></li>
+            <li><a href="/assets/pages/public.html">Договір публічної оферти</a></li>
 
           </ul>
         </div>
 
       </div>
-      <div class="container">
-        <p>&copy; 2025 WebRocket.</p>
-      </div>
+        <div class="container text-center">
+         <p>&copy; <script>document.write(new Date().getFullYear())</script> WebRocket.</p>
+          </div>
     </footer>
     <div class="cursor-light"></div>
     <button id="scrollToTopBtn" class="scrollToTopBtn">↑</button>
@@ -290,8 +315,64 @@ Modern websites and applications created with love for technology.">
         </form>
       </div>
     </div>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+
+    const swiper = new Swiper('.cube-slider', {
+      effect: 'cube',
+      grabCursor: true,
+      cubeEffect: {
+        shadow: true,
+        slideShadows: true,
+        shadowOffset: 20,
+        shadowScale: 0.94,
+      },
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      speed: 1000,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
   <script src="assets/js/jquery/jquery-3.7.1.min.js"></script>
   <script src="assets/js/plagins/lightslider.min.js"></script>
+  <script>        const typewriterH1 = new Typewriter('#typewriter-h1', {
+      loop: true,
+      delay: 75,
+      deleteSpeed: 40,
+    });
+
+    typewriterH1
+      .typeString('Ми — ракета вашого бізнесу')
+      .pauseFor(200)
+      .callFunction(() => {
+        typewriterP.start();
+      })
+      // .deleteAll()
+      // .typeString('Ми створюємо майбутнє разом з вами 💡')
+      // .pauseFor(1500)
+      // .deleteAll()
+      .start();
+
+    const typewriterP = new Typewriter('#typewriter-p', {
+      loop: true,
+      delay: 50,
+      deleteSpeed: 50,
+    });
+
+    typewriterP
+      .typeString('Сучасні сайти та програми, створені з любов\'ю до технологій.')
+      .pauseFor(3000)
+      // .deleteAll()
+</script>
   <script src="assets/js/wow.min.js"></script>
   <script src="assets/js/toast.js"></script>
   <script src="assets/js/main.js"></script>
