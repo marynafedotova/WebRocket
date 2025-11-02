@@ -2199,6 +2199,22 @@ footer .footer-link ul :hover {
   line-height: 1;
 }
 
+.styleh2{
+  color: var(--dark-violet-color);
+  padding: 16px 0px;
+  text-align: center;
+}
+
+.stylelink{
+  color: var(--light-cyan-color);
+  transition: all 0.8s ease;
+}
+.stylelink:hover{
+  color: var(--dark-violet-color);
+}
+.paragrap{
+  margin-bottom: 100px;
+}
 @media (max-width: 768px) {
   .approach-content {
     flex-direction: column;
