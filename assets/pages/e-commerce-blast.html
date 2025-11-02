@@ -36,7 +36,7 @@ Modern websites and applications created with love for technology.">
   <title>E-Commerce Blast - Потужний інтернет-магазин під ключ</title>
   <meta name="description"
     content="Створення повнофункціонального інтернет-магазину з інтеграцією платежів, маркетплейсів та CRM. Ваш бізнес онлайн за 6 місяців!">
-  <link rel="stylesheet" href="../style/dist/style.css">
+  <link rel="stylesheet" href="../style/style.css">
 </head>
 
 <body>
@@ -144,10 +144,10 @@ Modern websites and applications created with love for technology.">
           <p class="price">від <strong>4000$</strong></p>
           <p>Термін реалізації: до 6 місяців</p>
           <p>Кожен проєкт - індивідуальний, тому точну вартість розраховуємо після обговорення вашого бізнесу.</p>
-          <a href="#contact" class="cta-button">Замовити консультацію</a>
+          <!-- <a href="#contact" class="cta-button">Замовити консультацію</a> -->
+           <button class="cta-button" id="openModal">Обговорити проект</button>
         </section>
-
-        <section>
+        <section class="tech-steck">
           <h2>🔧 Технологічний стек</h2>
           <p>Ми використовуємо сучасні технології для створення надійних і швидких рішень:</p>
           <ul>
@@ -158,7 +158,6 @@ Modern websites and applications created with love for technology.">
             <li><strong>Платіжні системи:</strong> LiqPay, Privat24, PayPal, Stripe</li>
           </ul>
         </section>
-
         <section id="process">
           <h2>📅 Процес розробки</h2>
           <ol>
@@ -170,11 +169,13 @@ Modern websites and applications created with love for technology.">
             <li><strong>Запуск:</strong> Деплой проекту та навчання вашого персоналу (1 тиждень)</li>
           </ol>
         </section>
-
         <section id="cases">
           <h2>💼 Наші кейси</h2>
-          <p>Ось кілька прикладів інтернет-магазинів, які ми вже створили:</p>
-          <!-- Тут можуть бути кейси з картинками та описом -->
+          <p>Ось кілька приклад інтернет-магазину, які ми вже створили:</p>
+          <ul>
+            <li><a href="https://genbrothers.top/" class="stylelink">genbrothers.top</a></li>
+            <li><a href="https://marynafedotova.github.io/ChudnoKvitShop/" class="stylelink">ChudnoKvitShop</a></li>
+          </ul>
         </section>
 
         <section id="contact">
@@ -206,11 +207,24 @@ Modern websites and applications created with love for technology.">
         </p>
       </div>
     </footer>
+      <!-- Модальное окно -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal container">
+      <button class="modal-close" id="closeModal">×</button>
+      <h2 class="modal-title">Обговорення проекту</h2>
+      <form class="modal-form" id="projectForm">
+        <input type="text" id="userName" placeholder="Введіть ваше ім'я" required>
+        <input id="userEmail" name="email" type="text" placeholder="Ваш email" required>
+        <input type="tel" id="userPhone" placeholder="+38 (0__) ___-__-__">
+        <textarea id="projectDetails" name="details" placeholder="Опишіть ваш проект"></textarea>
+        <button type="submit" class="submit-btn">Надіслати</button>
+      </form>
+    </div>
+  </div>
+
     <div class="cursor-light"></div>
     <button id="scrollToTopBtn" class="scrollToTopBtn">↑</button>
   </div>
-  <script src="../js/jquery/jquery-3.7.1.min.js"></script>
-  <script src="../js/plagins/lightslider.min.js"></script>
   <script src="../js/wow.min.js"></script>
   <script src="../js/lazyload.min.js"></script>
   <script src="../js/toast.js"></script>

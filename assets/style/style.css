@@ -2204,7 +2204,20 @@ footer .footer-link ul :hover {
   padding: 16px 0px;
   text-align: center;
 }
-
+#cases .stylelink{
+  color: var(--light-cyan-color);
+  transition: all 0.8s ease;
+}
+#cases .stylelink:hover{
+  color: var(--dark-violet-color);
+}
+.tech-steck h2, #process h2, #cases h2, #contact h2{
+  text-align: center;
+  margin: 24px 0px;
+}
+#contact{
+  padding-bottom: 100px;
+}
 .stylelink{
   color: var(--light-cyan-color);
   transition: all 0.8s ease;
