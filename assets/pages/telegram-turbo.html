@@ -144,7 +144,9 @@ Modern websites and applications created with love for technology.">
         <p>Стартова ціна за базового бота</p>
         <p>+ додаткові модулі за вашими потребами</p>
         <p>Термін створення: до 30 днів</p>
-        <a href="#contact" class="cta-button">Замовити бота</a>
+        <!-- <a href="#contact" class="cta-button">Замовити бота</a> -->
+       <button class="cta-button" id="openModal">Замовити бота</button>
+
       </section>
 
       <section class="demo-container">
@@ -245,6 +247,21 @@ Modern websites and applications created with love for technology.">
         </p>
       </div>
     </footer>
+          <!-- Модальное окно -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal container">
+      <button class="modal-close" id="closeModal">×</button>
+      <h2 class="modal-title">Обговорення проекту</h2>
+      <form class="modal-form" id="projectForm">
+        <input type="text" id="userName" placeholder="Введіть ваше ім'я" required>
+        <input id="userEmail" name="email" type="text" placeholder="Ваш email" required>
+        <input type="tel" id="userPhone" placeholder="+38 (0__) ___-__-__">
+        <textarea id="projectDetails" name="details" placeholder="Опишіть ваш проект"></textarea>
+        <button type="submit" class="submit-btn">Надіслати</button>
+      </form>
+    </div>
+  </div>
+
     <div class="cursor-light"></div>
     <button id="scrollToTopBtn" class="scrollToTopBtn">↑</button>
   </div>
