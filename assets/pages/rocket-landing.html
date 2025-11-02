@@ -144,7 +144,9 @@ Modern websites and applications created with love for technology.">
         <p>Стартова вартість лендінгу (1 екран)</p>
         <p>+500$ за кожен додатковий екран</p>
         <p>Термін створення: до 30 днів</p>
-        <a href="#contact" class="cta-button">Замовити лендінг</a>
+        <!-- <a href="#contact" class="cta-button">Замовити лендінг</a> -->
+         <button class="cta-button" id="openModal">Замовити лендінг</button>
+
       </section>
 
       <section>
@@ -257,7 +259,6 @@ Modern websites and applications created with love for technology.">
       <section id="contact">
         <h2>📩 Готові запустити свій Rocket Landing?</h2>
         <p>Залиште заявку і ми зв'яжемося з вами для обговорення деталей протягом 24 годин</p>
-        <!-- Форма зворотного зв'язку -->
       </section>
     </main>
     <footer>
@@ -281,6 +282,21 @@ Modern websites and applications created with love for technology.">
         </p>
       </div>
     </footer>
+          <!-- Модальное окно -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal container">
+      <button class="modal-close" id="closeModal">×</button>
+      <h2 class="modal-title">Обговорення проекту</h2>
+      <form class="modal-form" id="projectForm">
+        <input type="text" id="userName" placeholder="Введіть ваше ім'я" required>
+        <input id="userEmail" name="email" type="text" placeholder="Ваш email" required>
+        <input type="tel" id="userPhone" placeholder="+38 (0__) ___-__-__">
+        <textarea id="projectDetails" name="details" placeholder="Опишіть ваш проект"></textarea>
+        <button type="submit" class="submit-btn">Надіслати</button>
+      </form>
+    </div>
+  </div>
+
     <div class="cursor-light"></div>
     <button id="scrollToTopBtn" class="scrollToTopBtn">↑</button>
   </div>
