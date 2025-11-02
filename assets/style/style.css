@@ -2228,6 +2228,9 @@ footer .footer-link ul :hover {
 .paragrap{
   margin-bottom: 100px;
 }
+.b100{
+  margin-bottom: 50px;
+}
 @media (max-width: 768px) {
   .approach-content {
     flex-direction: column;
