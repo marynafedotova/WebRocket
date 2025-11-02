@@ -1119,38 +1119,49 @@ h1 {
 /* Footer */
 footer {
   background: var(--dark-blue-color);
+  border-top: 1px solid var(--dark-violet-color);
   color: #fff;
   text-align: center;
   padding: 1rem 0;
 }
-footer #feedback_form {
-  display: flex;
-  flex-direction: column;
-  width: 20%;
+#feedback_form {
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  gap: 8px; 
 }
-footer #feedback_form img {
-  width: 34px;
-}
-footer #feedback_form input {
-  margin-top: 8px;
-  padding: 8px;
+
+#feedback_form input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
   border-radius: 8px;
-  outline: transparent;
-  border: 1px solid var(--light-cyan-color);
+  border: 1px solid var(--light-blue-color);
 }
 
-footer #feedback_form #btn-form {
-    padding: 8px;
-    background-color: var(--accent-color);
-    border: 1px solid var(--dark-violet-color);
+#feedback_message {
+  grid-column: 1 / 3; 
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  resize: none;
     border-radius: 8px;
-    color: var(--dark-blue-color);
-    text-transform: uppercase;
-    font-size: 0.9rem;
+  border: 1px solid var(--light-blue-color);
 }
 
-footer #feedback_form #btn-form:hover{
-  scale: 1.1;
+#btn-form {
+  grid-column: 1 / 3;
+  padding: 12px;
+  background-color: var(--light-cyan-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+#btn-form:hover {
+  background-color: var(--dark-violet-color);
 }
 
 footer #feedback_form input[tel] {
@@ -1522,7 +1533,7 @@ h1 {
 }
 
 /* Footer */
-footer {
+/* footer {
   background: var(--dark-blue-color);
   border-top: 1px solid var(--dark-violet-color);
   color: #fff;
@@ -1560,7 +1571,7 @@ footer #feedback_form #btn-form {
 }
 footer #feedback_form #btn-form:hover {
   scale: 1.1;
-}
+} */
 footer .footer-link ul li {
   background-color: var(--dark-violet-color);
   margin-bottom: 8px;

@@ -277,6 +277,7 @@ document.addEventListener('DOMContentLoaded', function () {
         nameFld.value = '';
         telFld.value = '';
         toast.success('Ваше повідомлення успішно надіслано.');
+        form.reset();
       } else {
         toast.error('Сталася помилка.');
       }

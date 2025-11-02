@@ -5,33 +5,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- HTML Meta Tags -->
-<title>Webrocket</title>
-<meta name="description" content="Webrocket - rocket of your business
+  <title>Webrocket</title>
+  <meta name="description" content="Webrocket - rocket of your business
 Modern websites and applications created with love for technology.">
 
-<!-- Facebook Meta Tags -->
-<meta property="og:url" content="https://marynafedotova.github.io/WebRocket">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Webrocket">
-<meta property="og:description" content="Webrocket - rocket of your business
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://marynafedotova.github.io/WebRocket">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Webrocket">
+  <meta property="og:description" content="Webrocket - rocket of your business
 Modern websites and applications created with love for technology.">
-<meta property="og:image" content="">
+  <meta property="og:image" content="">
 
-<!-- Twitter Meta Tags -->
-<meta name="twitter:card" content="summary_large_image">
-<meta property="twitter:domain" content="marynafedotova.github.io">
-<meta property="twitter:url" content="https://marynafedotova.github.io/WebRocket">
-<meta name="twitter:title" content="Webrocket">
-<meta name="twitter:description" content="Webrocket - rocket of your business
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="marynafedotova.github.io">
+  <meta property="twitter:url" content="https://marynafedotova.github.io/WebRocket">
+  <meta name="twitter:title" content="Webrocket">
+  <meta name="twitter:description" content="Webrocket - rocket of your business
 Modern websites and applications created with love for technology.">
-<meta name="twitter:image" content="">
+  <meta name="twitter:image" content="">
   <link rel="icon" type="image/png" href="../img/favicon/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="../img/favicon/favicon.svg" />
   <link rel="shortcut icon" href="../img/favicon/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
 
-<!-- Meta Tags Generated via https://www.opengraph.xyz -->
+  <!-- Meta Tags Generated via https://www.opengraph.xyz -->
   <title>Контакты | WEbrocket</title>
   <link rel="stylesheet" href="../style/style.css">
 </head>
@@ -106,10 +106,12 @@ Modern websites and applications created with love for technology.">
               </h3>
               <div class="contacts-item">
                 <div class="contacts-item-title">Телефон:</div>
-                 <a href="tel:+38 (063) 22-44-853">+38 (063) 22-44-853</a></div>
+                <a href="tel:+38 (063) 22-44-853">+38 (063) 22-44-853</a>
+              </div>
               <div class="contacts-item">
                 <div class="contacts-item-title">Email:</div>
-                 <a href="mailto:webrocketcontact@gmail.com">webrocketcontact@gmail.com</a></div>
+                <a href="mailto:webrocketcontact@gmail.com">webrocketcontact@gmail.com</a>
+              </div>
             </div>
             <div class="contacts-icon">
               <img src="../img/cityscapes-icon.svg" alt="cityscapes">
@@ -119,12 +121,15 @@ Modern websites and applications created with love for technology.">
                 <div class="pencil"><img src="../img/pencil-icon.svg" alt="pencil">
                 </div>Напишіть нам
               </h3>
-              <form action="#" method="POST" id="order">
+              <form id="order">
                 <input type="text" name="name" placeholder="Ваше ім'я" required>
                 <input type="email" name="email" placeholder="Ваш email" required>
-                <textarea name="message" placeholder="Ваше повідомлення" required cols="10"></textarea>
+                <input type="tel" name="phone" placeholder="Ваш номер телефону" required>
+                <textarea name="message" placeholder="Ваше повідомлення" required></textarea>
                 <button type="submit" class="btn-form">Надіслати</button>
               </form>
+
+              <div id="form-status"></div>
             </div>
           </div>
           <div class="contact-quetes">
@@ -152,13 +157,65 @@ Modern websites and applications created with love for technology.">
           </ul>
         </div>
       </div>
-        <div class="container text-center">
-         <p>&copy; <script>document.write(new Date().getFullYear())</script> WebRocket.</p>
-          </div>
-    </footer>    <div class="cursor-light"></div>
+      <div class="container text-center">
+        <p>&copy;
+          <script>document.write(new Date().getFullYear())</script> WebRocket.
+        </p>
+      </div>
+    </footer>
+    <div class="cursor-light"></div>
     <button id="scrollToTopBtn" class="scrollToTopBtn">↑</button>
 
   </div>
+  <script>
+    document.getElementById("order").addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const form = e.target;
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const phone = form.phone.value.trim();
+      const message = form.message.value.trim();
+
+      // ⚠️ Твій токен (для тестів, не вставляй у публічний сайт)
+      const token = "8585388465:AAHnE8BLMxt-2Ess1aSXTwRs87Nf4IP3qBk";
+      const chatId = "-1003259319005"; // ID групи або чату, куди надсилати
+
+      const text = `
+📩 <b>Нове повідомлення з сайту:</b>
+
+👤 Ім’я: ${name}
+📧 Email: ${email}
+📞 Телефон: ${phone}
+💬 Повідомлення:
+${message}
+  `;
+
+      try {
+        const response = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            chat_id: chatId,
+            text: text,
+            parse_mode: "HTML"
+          }),
+        });
+
+        if (response.ok) {
+          document.getElementById("form-status").innerText = "✅ Повідомлення надіслано!";
+          form.reset();
+        } else {
+          document.getElementById("form-status").innerText = "❌ Помилка при відправці.";
+        }
+      } catch (error) {
+        document.getElementById("form-status").innerText = "⚠️ Помилка мережі.";
+      }
+    });
+  </script>
+
   <script src="../js/jquery/jquery-3.7.1.min.js"></script>
   <script src="../js/plagins/lightslider.min.js"></script>
   <script src="../js/wow.min.js"></script>
