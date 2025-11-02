@@ -199,14 +199,22 @@
     </main>
     <footer>
       <div class="container-footer container">
-        <form action="#" id="feedback_form">
-          <input type="text" placeholder="Ім'я">
-          <input type="tel" name="tel" placeholder="Телефон">
+        <form id="feedback_form">
+          <input type="text" id="exampleInputName" placeholder="Введіть ваше ім'я">
+          <input type="tel" id="exampleInputTel" placeholder="+38 (0__) ___-__-__">
+          <textarea name="feedback_message" id="feedback_message" cols="30" rows="10"></textarea>
+          <button type="submit" id="btn-form">Надіслати</button>
         </form>
+        <div class="footer-link">
+          <ul>
+            <li><a href="../pages/politic.html">Політика конфіденційності</a></li>
+            <li><a href="../pages/pages/public.html">Договір публічної оферти</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="container">
-        <p>&copy; 2025 WebRocket</p>
-      </div>
+        <div class="container text-center">
+         <p>&copy; <script>document.write(new Date().getFullYear())</script> WebRocket.</p>
+          </div>
     </footer>
     <div class="cursor-light"></div>
     <button id="scrollToTopBtn" class="scrollToTopBtn">↑</button>
