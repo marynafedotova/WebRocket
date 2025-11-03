@@ -7,6 +7,9 @@
  * @site https://jonsuh.com/hamburgers
  * @link https://github.com/jonsuh/hamburgers
  */
+ .topbottom100{
+  padding: 100px 0px;
+ }
 .hamburger {
   padding: 15px 15px;
   display: inline-block;
@@ -22,6 +25,8 @@
   margin: 0;
   overflow: visible;
 }
+
+
 .hamburger:hover {
   opacity: 0.7;
 }
